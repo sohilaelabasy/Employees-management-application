@@ -151,6 +151,25 @@ public class Main {
         }
         System.out.println("Total Salaries for " + depart + " department: " + totalSalaries);
     }
+    static void sorting(){
+        System.out.println("choose the type of sorting...");
+        System.out.println("1-sorting by names \n2-sorting by phone number\n3-sorting by department");
+        Scanner input = new Scanner(System.in);
+        int sortType=input.nextInt();
+        switch (sortType){
+            case 1:sortingByNames();break;
+            case 2:sortingByPhoneNumber();break;
+            case 3:sortingByDepartment();break;
+        }
+    }
+    static void sortingByNames(){
 
+    }
+    static void sortingByPhoneNumber(){
+
+    }
+    static void sortingByDepartment(){
+
+    }
 
 }
