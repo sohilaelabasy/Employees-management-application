@@ -1,9 +1,9 @@
 
-## Employee Management System
+## Employee Management Application
 
 ### Description
 
-This project is an Employee Management System that allows users to manage employee records efficiently. It provides functionalities to:
+This project is an Employee Management Application that allows users to manage employee records efficiently. It provides functionalities to:
 
 - **Add Employee**: Store employee details including name, phone number, address, salary, and department.
 - **Display Employee**: Retrieve and view an employee's details.
@@ -31,7 +31,7 @@ This project is an Employee Management System that allows users to manage employ
 ### Getting Started
 
 1. Clone the repository:
-    git clone https://github.com/sohilaelabasy/employee-management.git
+    git clone https://github.com/sohilaelabasy/Employees-management-application.git
   
 
 ### Author
