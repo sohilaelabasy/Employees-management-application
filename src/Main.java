@@ -2,14 +2,18 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static ArrayList<String> names = new ArrayList<>();
     public static ArrayList<Integer> phone = new ArrayList<>();
     public static ArrayList<String> address = new ArrayList<>();
     public static ArrayList<Double> salary = new ArrayList<>();
     public static ArrayList<String> department = new ArrayList<>();
+    public static   Scanner input = new Scanner(System.in);
+
     public static void main(String[] args) {
         System.out.println("--------welcome to employees application--------");
         while (true) {
@@ -32,8 +36,10 @@ public class Main {
             if (choice == 7) break;
         }
     }
+
+
     static void adding() {
-        Scanner input = new Scanner(System.in);
+
         System.out.println("Enter employee name");
 
         String empName = input.nextLine();
@@ -56,9 +62,11 @@ public class Main {
         salary.add(empSalary);
         department.add(empDepartment);
     }
+
+
     static void display() {
         System.out.println("Please enter employee name...");
-        Scanner input = new Scanner(System.in);
+
         String name = input.nextLine();
         if (!names.contains(name)) {
             System.out.println(name + " is not found");
@@ -72,9 +80,11 @@ public class Main {
         System.out.println("Salary:" + salary.get(index));
         System.out.println("Department:" + department.get(index));
     }
+
+
     static void delete() {
         System.out.println("please enter the name of the employee...");
-        Scanner input = new Scanner(System.in);
+
         String name = input.nextLine();
         int index = names.indexOf(name);
         if (names.contains(name)) {
@@ -87,9 +97,11 @@ public class Main {
             System.out.println("Employee is deleted successfully");
         }
     }
+
+
     static void edit() {
         System.out.println("Plese enter tne employee name...");
-        Scanner input = new Scanner(System.in);
+
         String name = input.nextLine();
 
         int index = names.indexOf(name);
@@ -125,7 +137,7 @@ public class Main {
     }
     static void calculateTotalSalaries() {
         System.out.println("Plese enter tne Department...");
-        Scanner input = new Scanner(System.in);
+
         String depart = input.nextLine();
 
         double totalSalaries = 0.0;
@@ -140,7 +152,7 @@ public class Main {
     static void sorting() {
         System.out.println("choose the type of sorting...");
         System.out.println("1-sorting by names \n2-sorting by phone number\n3-sorting by department");
-        Scanner input = new Scanner(System.in);
+
         int sortType = input.nextInt();
         switch (sortType) {
             case 1:
@@ -198,7 +210,26 @@ public class Main {
         }
 
     }
+    static void sortingByDepartment() {
+        ArrayList<String>sorted= new ArrayList<>();
+        for (String depart:department){
+            sorted.add(depart);
+        }
+        Collections.sort(sorted);
+        for(String sort:sorted){
+            for(String depart :department){
+                if(depart.equals(sort)){
+                    int index = department.indexOf(depart);
+                    System.out.println("employee data is :");
+                    System.out.println(names.get(index));
+                    System.out.println(phone.get(index));
+                    System.out.println(address.get(index));
+                    System.out.println(salary.get(index));
+                    System.out.println(department.get(index));
+                }
+            }
 
+        }
 
-
+    }
 }
