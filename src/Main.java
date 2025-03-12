@@ -176,5 +176,29 @@ public class Main {
         }
 
     }
+    static void sortingByPhoneNumber() {
+        ArrayList<Integer>sorted= new ArrayList<>();
+        for (int phoneNum:phone){
+            sorted.add(phoneNum);
+        }
+        Collections.sort(sorted);
+        for(int sort:sorted){
+            for(int phoneNum :phone){
+                if(phoneNum==sort){
+                    int index = phone.indexOf(phoneNum);
+                    System.out.println("employee data is :");
+                    System.out.println(names.get(index));
+                    System.out.println(phone.get(index));
+                    System.out.println(address.get(index));
+                    System.out.println(salary.get(index));
+                    System.out.println(department.get(index));
+                }
+            }
+
+        }
+
+    }
+
+
 
 }
