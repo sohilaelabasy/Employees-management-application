@@ -12,7 +12,7 @@ public class Main {
     public static ArrayList<String> address = new ArrayList<>();
     public static ArrayList<Double> salary = new ArrayList<>();
     public static ArrayList<String> department = new ArrayList<>();
-    public static   Scanner input = new Scanner(System.in);
+    public static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
         System.out.println("--------welcome to employees application--------");
@@ -22,12 +22,24 @@ public class Main {
             Scanner input = new Scanner(System.in);
             int choice = input.nextInt();
             switch (choice) {
-                case 1:adding();break;
-                case 2:display();break;
-                case 3:delete();break;
-                case 4:edit();break;
-                case 5:calculateTotalSalaries();break;
-                case 6:sorting();break;
+                case 1:
+                    adding();
+                    break;
+                case 2:
+                    display();
+                    break;
+                case 3:
+                    delete();
+                    break;
+                case 4:
+                    edit();
+                    break;
+                case 5:
+                    calculateTotalSalaries();
+                    break;
+                case 6:
+                    sorting();
+                    break;
                 case 7:
                     break;
                 default:
@@ -135,6 +147,7 @@ public class Main {
         }
 
     }
+
     static void calculateTotalSalaries() {
         System.out.println("Plese enter tne Department...");
 
@@ -149,6 +162,7 @@ public class Main {
         }
         System.out.println("Total Salaries for " + depart + " department: " + totalSalaries);
     }
+
     static void sorting() {
         System.out.println("choose the type of sorting...");
         System.out.println("1-sorting by names \n2-sorting by phone number\n3-sorting by department");
@@ -166,15 +180,16 @@ public class Main {
                 break;
         }
     }
+
     static void sortingByNames() {
-       ArrayList<String>sorted= new ArrayList<>();
-       for (String name:names){
-           sorted.add(name);
-       }
-       Collections.sort(sorted);
-        for(String sort:sorted){
-            for(String name :names){
-                if(name.equals(sort)){
+        ArrayList<String> sorted = new ArrayList<>();
+        for (String name : names) {
+            sorted.add(name);
+        }
+        Collections.sort(sorted);
+        for (String sort : sorted) {
+            for (String name : names) {
+                if (name.equals(sort)) {
                     int index = names.indexOf(name);
                     System.out.println("employee data is :");
                     System.out.println(names.get(index));
@@ -188,15 +203,16 @@ public class Main {
         }
 
     }
+
     static void sortingByPhoneNumber() {
-        ArrayList<Integer>sorted= new ArrayList<>();
-        for (int phoneNum:phone){
+        ArrayList<Integer> sorted = new ArrayList<>();
+        for (int phoneNum : phone) {
             sorted.add(phoneNum);
         }
         Collections.sort(sorted);
-        for(int sort:sorted){
-            for(int phoneNum :phone){
-                if(phoneNum==sort){
+        for (int sort : sorted) {
+            for (int phoneNum : phone) {
+                if (phoneNum == sort) {
                     int index = phone.indexOf(phoneNum);
                     System.out.println("employee data is :");
                     System.out.println(names.get(index));
@@ -210,15 +226,16 @@ public class Main {
         }
 
     }
+
     static void sortingByDepartment() {
-        ArrayList<String>sorted= new ArrayList<>();
-        for (String depart:department){
+        ArrayList<String> sorted = new ArrayList<>();
+        for (String depart : department) {
             sorted.add(depart);
         }
         Collections.sort(sorted);
-        for(String sort:sorted){
-            for(String depart :department){
-                if(depart.equals(sort)){
+        for (String sort : sorted) {
+            for (String depart : department) {
+                if (depart.equals(sort)) {
                     int index = department.indexOf(depart);
                     System.out.println("employee data is :");
                     System.out.println(names.get(index));
